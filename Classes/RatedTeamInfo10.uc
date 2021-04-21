@@ -1,0 +1,63 @@
+class RatedTeamInfo10 expands RatedTeamInfo;
+
+// The Corrupt
+#exec TEXTURE IMPORT NAME=TLThunder FILE=textures\teamsymbols\TLThunder.PCX GROUP="TeamSymbols" MIPS=OFF
+
+defaultproperties
+{
+      TeamName="Metal Guards"
+      TeamSymbol=Texture'Botpack.TeamSymbols.TLThunder'
+      TeamBio="A group of brainwashed and psychotic soldiers wearing metal masks. They serve Xan Kriegor as sparring partners for The Corrupt, and obey their master's will without hesitation."
+      BotNames(0)="Arkoth"
+      BotNames(1)="Risa"
+      BotNames(2)="Rath"
+      BotNames(3)="Vixen"
+      BotNames(4)="Barktooth"
+      BotNames(5)="Isis"
+      BotNames(6)="Damascus"
+      BotNames(7)="Tasha"
+      BotClassifications(0)="Metal Guard"
+      BotClassifications(1)="Metal Guard"
+      BotClassifications(2)="Metal Guard"
+      BotClassifications(3)="Metal Guard"
+      BotClassifications(4)="Metal Guard"
+      BotClassifications(5)="Metal Guard"
+      BotClassifications(6)="Metal Guard"
+      BotClassifications(7)="Metal Guard"
+      BotClasses(0)="BotPack.TMale2Bot"
+      BotClasses(1)="BotPack.TFemale2Bot"
+      BotClasses(2)="BotPack.TMale2Bot"
+      BotClasses(3)="BotPack.TFemale2Bot"
+      BotClasses(4)="BotPack.TMale2Bot"
+      BotClasses(5)="BotPack.TFemale2Bot"
+      BotClasses(6)="BotPack.TFemale2Bot"
+      BotClasses(7)="BotPack.TFemale2Bot"
+      BotSkins(0)="Gard"
+      BotSkins(1)="Garf"
+      BotSkins(2)="Gard"
+      BotSkins(3)="Garf"
+      BotSkins(4)="Gard"
+      BotSkins(5)="Garf"
+      BotSkins(6)="Gard"
+      BotSkins(7)="Garf"
+      BotFaces(0)="Radkin"
+      BotFaces(1)="Risa"
+      BotFaces(2)="Wraith"
+      BotFaces(3)="Vixen"
+      BotFaces(4)="Drake"
+      BotFaces(5)="Isis"
+      BotFaces(6)="Von"
+      BotFaces(7)="Tasha"
+      BotBio(0)="Arkoth's history was deleted during Liandri conditioning. Now a member of 'The Corrupt,' he serves Xan Kriegor's will without question."
+      BotBio(1)="Description not available."
+      BotBio(2)="Rath is more machine than human. Rebuilt from spare parts and what was left of his brain after the Earthstar One incident, his mental instabilities make him an excellent warrior."
+      BotBio(3)="Description not available."
+      BotBio(4)="Barktooth is a madman. Screaming with berserk rage, he would rather rip an opponent to shreds with his bare hands than fight from afar. When forced to use a gun, he favors the Flak Cannon's close range stopping power."
+      BotBio(5)="Description not available."
+      BotBio(6)="Orphaned after birth, this heartless killer spent years on the street, learning his trade and losing his emotions. The Corrupt had no difficulty in bending his will towards their ends. Now completely void of human feeling, Damascus is an unstoppable machine."
+      BotBio(7)="Description not available."
+      MaleClass=Class'Botpack.TMale2'
+      MaleSkin="SoldierSkins.Gard"
+      FemaleClass=Class'Botpack.TFemale2'
+      FemaleSkin="SGirlSkins.Garf"
+}

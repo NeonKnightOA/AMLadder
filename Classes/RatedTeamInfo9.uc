@@ -1,0 +1,63 @@
+class RatedTeamInfo9 expands RatedTeamInfo;
+
+// The Corrupt
+#exec TEXTURE IMPORT NAME=TLPhalanx FILE=textures\teamsymbols\TLPhalanx.PCX GROUP="TeamSymbols" MIPS=OFF
+
+defaultproperties
+{
+      TeamName="The Corrupt"
+      TeamSymbol=Texture'Botpack.TeamSymbols.TLPhalanx'
+      TeamBio="The Corrupt is Liandri's sponsored team entry in the Tournament. It is entirely made up of the best advanced AIs that the corporation's wealth can buy, and features the reigning champion, Xan Kriegor, as its leader."
+      BotNames(0)="Vector"
+      BotNames(1)="Cathode"
+      BotNames(2)="Matrix"
+      BotNames(3)="Silicon"
+      BotNames(4)="Divisor"
+      BotNames(5)="Tensor"
+      BotNames(6)="Function"
+      BotNames(7)="Enigma"
+      BotClassifications(0)="Slave Warrior"
+      BotClassifications(1)="Slave Warrior"
+      BotClassifications(2)="Slave Warrior"
+      BotClassifications(3)="Slave Warrior"
+      BotClassifications(4)="Slave Warrior"
+      BotClassifications(5)="Slave Warrior"
+      BotClassifications(6)="Slave Warrior"
+      BotClassifications(7)="Slave Warrior"
+      BotClasses(0)="BotPack.TMale2Bot"
+      BotClasses(1)="BotPack.TFemale2Bot"
+      BotClasses(2)="BotPack.TMale2Bot"
+      BotClasses(3)="BotPack.TFemale2Bot"
+      BotClasses(4)="BotPack.TFemale2Bot"
+      BotClasses(5)="BotPack.TMale2Bot"
+      BotClasses(6)="BotPack.TFemale2Bot"
+      BotClasses(7)="BotPack.TFemale2Bot"
+      BotSkins(0)="hkil"
+      BotSkins(1)="fwar"
+      BotSkins(2)="hkil"
+      BotSkins(3)="fwar"
+      BotSkins(4)="fwar"
+      BotSkins(5)="hkil"
+      BotSkins(6)="fwar"
+      BotSkins(7)="fwar"
+      BotFaces(0)="Vector"
+      BotFaces(1)="Cathode"
+      BotFaces(2)="Matrix"
+      BotFaces(3)="Lilith"
+      BotFaces(4)="Fury"
+      BotFaces(5)="Tensor"
+      BotFaces(6)="Fury"
+      BotFaces(7)="Lilith"
+      BotBio(0)="A warrior slave. Member of 'The Corrupt,' a group of reprogrammed warriors who fight for the entertainment of Xan Kriegor."
+      BotBio(1)="A warrior slave. Member of 'The Corrupt,' a group of reprogrammed warriors who fight for the entertainment of Xan Kriegor."
+      BotBio(2)="A warrior slave. Member of 'The Corrupt,' a group of reprogrammed warriors who fight for the entertainment of Xan Kriegor."
+      BotBio(3)="A warrior slave. Member of 'The Corrupt,' a group of reprogrammed warriors who fight for the entertainment of Xan Kriegor."
+      BotBio(4)="A warrior slave. Member of 'The Corrupt,' a group of reprogrammed warriors who fight for the entertainment of Xan Kriegor."
+      BotBio(5)="A warrior slave. Member of 'The Corrupt,' a group of reprogrammed warriors who fight for the entertainment of Xan Kriegor."
+      BotBio(6)="A warrior slave. Member of 'The Corrupt,' a group of reprogrammed warriors who fight for the entertainment of Xan Kriegor."
+      BotBio(7)="A warrior slave. Member of 'The Corrupt,' a group of reprogrammed warriors who fight for the entertainment of Xan Kriegor."
+      MaleClass=Class'Botpack.TMale2'
+      MaleSkin="SoldierSkins.hkil"
+      FemaleClass=Class'Botpack.TFemale2'
+      FemaleSkin="SGirlSkins.fwar"
+}
