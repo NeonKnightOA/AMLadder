@@ -1,7 +1,5 @@
 class AMTeamBrowser extends TeamBrowser;
 
-var ObjectiveBrowser ObjectiveWindow;
-
 function NextPressed()
 {
 	local EnemyBrowser EB;

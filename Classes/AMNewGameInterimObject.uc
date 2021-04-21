@@ -1,7 +1,5 @@
 class AMNewGameInterimObject expands NewGameInterimObject;
 
-var string GameWindowType;
-
 function PostBeginPlay()
 {
 	local LadderInventory LadderObj;

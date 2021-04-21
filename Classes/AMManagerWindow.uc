@@ -4,16 +4,6 @@
 
 class AMManagerWindow extends ManagerWindow Config(AMLadder);
 
-var boolean DMLadderBeaten;
-var boolean DOMLadderBeaten;
-var boolean CTFLadderBeaten;
-var boolean ASLadderBeaten;
-
-DMLadderBeaten == false;
-DOMLadderBeaten == false;
-CTFLadderBeaten == false;
-ASLadderBeaten == false;
-
 function StartLadder ()
 {
 	UTConsole(GetPlayerOwner().Player.Console).ManagerWindowClass = "AMLadder.AMManagerWindow";
@@ -42,8 +32,8 @@ function SwitchBack ()
 
 function Created()
 {
-	local float Xs, Ys;
-	local int i;
+	/* local float Xs, Ys;
+	local int i; */
 	local int W, H;
 	local float XWidth, YHeight, XMod, YMod, XPos, YPos;
 	local color TextColor;
@@ -308,7 +298,6 @@ function Created()
 	{
 		if (LadderObj.DMRank == 6)
 		{
-			DMLadderBeaten == true;
 			InfoArea.AddText(MatchesString@LadderObj.DMPosition);
 		}
 		else
@@ -329,7 +318,6 @@ function Created()
 		{
 			if (LadderObj.DOMRank == 6)
 			{
-				DOMLadderBeaten == true;
 				InfoArea.AddText(MatchesString@LadderObj.DOMPosition);
 			}
 			else
@@ -351,7 +339,6 @@ function Created()
 		{
 			if (LadderObj.CTFRank == 6)
 			{
-				CTFLadderBeaten == true;
 				InfoArea.AddText(MatchesString@LadderObj.CTFPosition);
 			}
 			else
@@ -372,7 +359,6 @@ function Created()
 		else {
 			if (LadderObj.ASRank == 6)
 			{
-				ASLadderBeaten == true;
 				InfoArea.AddText(MatchesString@LadderObj.ASPosition);
 			}
 			else
@@ -381,7 +367,9 @@ function Created()
 			}
 		}
 	}
-	if ( DMLadderBeaten && DOMLadderBeaten && CTFLadderBeaten && ASLadderBeaten ) {
+	
+	if ( (LadderObj.DMRank == 6) && (LadderObj.DOMRank == 6) && (LadderObj.CTFRank == 6) && (LadderObj.ASRank == 6) ) 
+	{
 		InfoArea.AddText(" ");
 		InfoArea.AddText(ChallengeString);
 		InfoArea.AddText(ChalPosString@class'AMLadderLadder'.Static.GetRank(LadderObj.ChalRank));
@@ -391,10 +379,10 @@ function Created()
 
 function BeforePaint (Canvas C, float X, float Y)
 {
-	local LadderInventory LadderObj;
+	/* local LadderInventory LadderObj;
 	local float Xs;
 	local float Ys;
-	local int i;
+	local int i; */
 	local int W;
 	local int H;
 	local float XWidth;
@@ -424,6 +412,7 @@ function BeforePaint (Canvas C, float X, float Y)
 	DOMLadderButton.WinTop = YPos;
 	DOMLadderButton.SetSize(XWidth,YHeight);
 	DOMLadderButton.MyFont = Class'UTLadderStub'.Static.GetStubClass().Static.GetHugeFont(Root);
+	
 	if ( DOMDoor != None )
 	{
 		XPos = 83.0 / 1024 * XMod;
@@ -434,6 +423,7 @@ function BeforePaint (Canvas C, float X, float Y)
 		DOMDoor.WinTop = YPos;
 		DOMDoor.SetSize(XWidth,YHeight);
 	}
+	
 	XPos = 95.0 / 1024 * XMod;
 	YPos = 363.0 / 768 * YMod;
 	XWidth = 307.0 / 1024 * XMod;
@@ -442,6 +432,7 @@ function BeforePaint (Canvas C, float X, float Y)
 	CTFLadderButton.WinTop = YPos;
 	CTFLadderButton.SetSize(XWidth,YHeight);
 	CTFLadderButton.MyFont = Class'UTLadderStub'.Static.GetStubClass().Static.GetHugeFont(Root);
+	
 	if ( CTFDoor != None )
 	{
 		XPos = 83.0 / 1024 * XMod;
@@ -452,6 +443,7 @@ function BeforePaint (Canvas C, float X, float Y)
 		CTFDoor.WinTop = YPos;
 		CTFDoor.SetSize(XWidth,YHeight);
 	}
+	
 	XPos = 95.0 / 1024 * XMod;
 	YPos = 497.0 / 768 * YMod;
 	XWidth = 307.0 / 1024 * XMod;
@@ -460,6 +452,7 @@ function BeforePaint (Canvas C, float X, float Y)
 	ASLadderButton.WinTop = YPos;
 	ASLadderButton.SetSize(XWidth,YHeight);
 	ASLadderButton.MyFont = Class'UTLadderStub'.Static.GetStubClass().Static.GetHugeFont(Root);
+	
 	if ( ASDoor != None )
 	{
 		XPos = 83.0 / 1024 * XMod;
@@ -470,6 +463,7 @@ function BeforePaint (Canvas C, float X, float Y)
 		ASDoor.WinTop = YPos;
 		ASDoor.SetSize(XWidth,YHeight);
 	}
+	
 	XPos = 95.0 / 1024 * XMod;
 	YPos = 627.0 / 768 * YMod;
 	XWidth = 307.0 / 1024 * XMod;
@@ -478,6 +472,7 @@ function BeforePaint (Canvas C, float X, float Y)
 	ChallengeLadderButton.WinTop = YPos;
 	ChallengeLadderButton.SetSize(XWidth,YHeight);
 	ChallengeLadderButton.MyFont = Class'UTLadderStub'.Static.GetStubClass().Static.GetHugeFont(Root);
+	
 	if ( ChalDoor != None )
 	{
 		XPos = 83.0 / 1024 * XMod;
@@ -488,6 +483,7 @@ function BeforePaint (Canvas C, float X, float Y)
 		ChalDoor.WinTop = YPos;
 		ChalDoor.SetSize(XWidth,YHeight);
 	}
+	
 	XPos = 656.0 / 1024 * XMod;
 	YPos = 63.0 / 768 * YMod;
 	XWidth = 222.0 / 1024 * XMod;
@@ -496,6 +492,7 @@ function BeforePaint (Canvas C, float X, float Y)
 	TrophyButton.WinTop = YPos;
 	TrophyButton.SetSize(XWidth,YHeight);
 	TrophyButton.MyFont = Class'UTLadderStub'.Static.GetStubClass().Static.GetHugeFont(Root);
+	
 	if ( TrophyDoor != None )
 	{
 		XPos = 650.0 / 1024 * XMod;
@@ -506,6 +503,7 @@ function BeforePaint (Canvas C, float X, float Y)
 		TrophyDoor.WinTop = YPos;
 		TrophyDoor.SetSize(XWidth,YHeight);
 	}
+	
 	XPos = 192.0 / 1024 * XMod;
 	YPos = 701.0 / 768 * YMod;
 	XWidth = 64.0 / 1024 * XMod;
@@ -594,52 +592,64 @@ function OpenDoors ()
 function ShowWindow ()
 {
 	Super(UWindowWindow).ShowWindow();
+	
 	if ( (DOMDoorOpen[LadderObj.Slot] == 0) && (DOMDoor != None) )
 	{
 		DOMDoor.bClosed = True;
 	}
+	
 	if ( (CTFDoorOpen[LadderObj.Slot] == 0) && (CTFDoor != None) )
 	{
 		CTFDoor.bClosed = True;
 	}
+	
 	if ( (ASDoorOpen[LadderObj.Slot] == 0) && (ASDoor != None) )
 	{
 		ASDoor.bClosed = True;
 	}
+	
 	if ( (ChalDoorOpen[LadderObj.Slot] == 0) && (ChalDoor != None) )
 	{
 		ChalDoor.bClosed = True;
 	}
+	
 	if ( (TrophyDoorOpen[LadderObj.Slot] == 0) && (TrophyDoor != None) )
 	{
 		TrophyDoor.bClosed = True;
 	}
+	
 	OpenTime = 0.0;
 	InfoArea.Clear();
+	
 	if ( Root.WinWidth < 512 )
 	{
 		return;
 	}
+	
 	InfoArea.AddText(RankString[0] @ Class'AMLadderLadder'.Static.GetRank(LadderObj.DMRank));
 	InfoArea.AddText(MatchesString @ string(LadderObj.DMPosition - 1));
+	
 	if ( LadderObj.DMPosition >= 3 )
 	{
 		InfoArea.AddText("");
 		InfoArea.AddText(RankString[1] @ Class'AMLadderLadder'.Static.GetRank(LadderObj.DOMRank));
 		InfoArea.AddText(MatchesString @ string(LadderObj.DOMPosition - 1));
 	}
+	
 	if ( LadderObj.DOMPosition >= 2 )
 	{
 		InfoArea.AddText("");
 		InfoArea.AddText(RankString[2] @ Class'AMLadderLadder'.Static.GetRank(LadderObj.CTFRank));
 		InfoArea.AddText(MatchesString @ string(LadderObj.CTFPosition - 1));
 	}
+	
 	if ( LadderObj.CTFPosition >= 3 )
 	{
 		InfoArea.AddText("");
 		InfoArea.AddText(RankString[3] @ Class'AMLadderLadder'.Static.GetRank(LadderObj.ASRank));
 		InfoArea.AddText(MatchesString @ string(LadderObj.ASPosition - 1));
 	}
+	
 	if ( (LadderObj.DMRank == 6) && (LadderObj.DOMRank == 6) && (LadderObj.CTFRank == 6) && (LadderObj.ASRank == 6) )
 	{
 		InfoArea.AddText(" ");

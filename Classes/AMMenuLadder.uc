@@ -13,7 +13,7 @@ function BackPressed ()
 function EvaluateMatch (optional bool bTrophyVictory)
 {
 	local string SaveString;
-	local int Team, i;
+	local int Team /*, i */;
 	
 	// Save the game.
 	if (LadderObj != None)

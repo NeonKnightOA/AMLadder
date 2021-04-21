@@ -23,7 +23,7 @@ function RestoreGame(int i)
 	local LadderInventory LadderObj;
 	local string Temp, Name, PlayerSkin;
 	local Class<TournamentPlayer> PlayerClass;
-	local int Pos, Team, j, Face;
+	local int Pos, Team, /* j, */ Face;
 	
 	if (Saves[i] == "")
 	{

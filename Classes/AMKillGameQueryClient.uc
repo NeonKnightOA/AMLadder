@@ -4,8 +4,6 @@
 
 class AMKillGameQueryClient extends KillGameQueryClient;
 
-var AMSlotWindow SlotWindow;
-
 function YesPressed ()
 {
 	if ( SlotWindow != None )
